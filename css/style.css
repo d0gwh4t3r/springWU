@@ -1,0 +1,102 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows:50px 30px 2fr 45% 40px ;
+    grid-template-areas:
+    'he1 he1 he1 '
+    'nv nv nv'
+    'mn mn mn'
+    'se se se'
+    'fo fo fo'
+}
+
+header {
+    grid-area: he1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: green;
+    color: white;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+
+.logo {
+    font-size: 1.6rem;
+}
+
+.social img {
+    width: 25px;
+    height: auto;
+    margin-left: 15px;
+}
+
+footer{
+     grid-area: fo;
+     display: flex;
+    background-color:gray ;
+   
+}   
+
+section{
+    display: flex;
+    grid-area: se;
+    background-color: blue;
+}
+main{
+    grid-area: mn;
+    display: flex;
+    background-image:url(/springWU/img/ChatGPT\ Image\ 23\ feb.\ 2026\ 13_35_13.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}   
+
+nav {
+    grid-area: nv;
+    background-color: rgb(12, 96, 12);
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;     
+    display: flex;        
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: yellowgreen;
+}
+
+img {
+    filter: sepia(40%) saturate(120%);
+}
