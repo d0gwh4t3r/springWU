@@ -8,7 +8,7 @@ html, body{
     height: 100vh;
 
     grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows:50px 30px 2fr 45% 40px ;
+   grid-template-rows:  40px 20px 1fr 2fr 20px;
     grid-template-areas:
     'he1 he1 he1 '
     'nv nv nv'
@@ -51,19 +51,21 @@ footer{
    
 }   
 
-section{
-    display: flex;
+section {
     grid-area: se;
-    background-color: blue;
+   
+    gap: 20px;
+    padding: 20px;
+    background-color: green
 }
 main{
     grid-area: mn;
     display: flex;
-    background-image:url(/springWU/img/ChatGPT\ Image\ 23\ feb.\ 2026\ 13_35_13.png);
+    background-image: url(/img/ChatGPT\ Image\ 23\ feb.\ 2026\ 13_35_13.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
+    min-height: 300px
 }   
 
 nav {
@@ -99,4 +101,105 @@ nav a:hover {
 
 img {
     filter: sepia(40%) saturate(120%);
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+.card h2 {
+    margin-top: 0;
+}
+
+.info-section {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    background-color: green;
+}
+
+
+.top-sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+
+.bottom-sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+
+    .image-row {
+        display: none;
+    }
+  .bottom-sections{
+    display: none;
+  }
+  .top-sections {
+        grid-template-columns: 1fr;
+    }
+}
+
+.highlight {
+    background: #dce9d6;
+    border-radius: 12px;
+    padding: 25px;
+    
+}
+
+.highlight h2 {
+    margin-bottom: 15px;
+    color: #1e4d2b;
+}
+
+.date {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1e4d2b;
+
+}
+
+.match {
+    background: #1e4d2b;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(to bottom, green, rgb(0, 90, 0));
+    color: white;
+    padding: 20px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, red, rgba(255, 0, 0, 0.539));
 }
