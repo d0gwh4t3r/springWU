@@ -1,21 +1,28 @@
-html, body{
-    margin: 0px;
-    padding: 0px;
+
+html, body {
+    margin: 0;
+    padding: 0;
 }
+
+img {
+    filter: sepia(40%) saturate(120%);
+}
+
 
 #container {
     display: grid;
-    height: 100vh;
-
-    grid-template-columns: 1fr 1fr 1fr ;
-   grid-template-rows:  40px 20px 1fr 2fr 20px;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 40px 20px 1fr 2fr 20px;
     grid-template-areas:
-    'he1 he1 he1 '
-    'nv nv nv'
-    'mn mn mn'
-    'se se se'
-    'fo fo fo'
+        'he1 he1 he1'
+        'nv  nv  nv'
+        'mn  mn  mn'
+        'se  se  se'
+        'fo  fo  fo';
 }
+
+
 
 header {
     grid-area: he1;
@@ -27,12 +34,11 @@ header {
     color: white;
 }
 
-
 header h1 {
     margin: 0;
     font-size: 1.4rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
 
 .logo {
     font-size: 1.6rem;
@@ -44,29 +50,7 @@ header h1 {
     margin-left: 15px;
 }
 
-footer{
-     grid-area: fo;
-     display: flex;
-    background-color:gray ;
-   
-}   
 
-section {
-    grid-area: se;
-   
-    gap: 20px;
-    padding: 20px;
-    background-color: green
-}
-main{
-    grid-area: mn;
-    display: flex;
-    background-image: url(/img/ChatGPT\ Image\ 23\ feb.\ 2026\ 13_35_13.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 300px
-}   
 
 nav {
     grid-area: nv;
@@ -76,8 +60,8 @@ nav {
 }
 
 nav ul {
-    list-style: none;     
-    display: flex;        
+    list-style: none;
+    display: flex;
     justify-content: center;
     width: 100%;
     margin: 0;
@@ -93,29 +77,64 @@ nav a {
     color: white;
     font-weight: bold;
     transition: 0.3s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 nav a:hover {
     color: yellowgreen;
 }
 
-img {
-    filter: sepia(40%) saturate(120%);
-}
-.card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
+nav a.active {
+    color: yellowgreen;
+    border-bottom: 2px solid yellowgreen;
+    padding-bottom: 1px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+
+
+main {
+    grid-area: mn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url(/img/ChatGPT\ Image\ 23\ feb.\ 2026\ 13_35_13.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
 }
-.card h2 {
-    margin-top: 0;
+
+
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hero-text h2 {
+    margin: 0 0 6px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text p {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+
+
+section {
+    grid-area: se;
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .info-section {
@@ -125,14 +144,11 @@ img {
     background-color: green;
 }
 
-
 .top-sections {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-
-
 
 .bottom-sections {
     display: grid;
@@ -141,30 +157,29 @@ img {
 }
 
 
+
 .card {
-    background-color: white;
+    background: #dce9d6;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    color: #1e4d2b;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
 }
-@media (max-width: 768px) {
 
-    .image-row {
-        display: none;
-    }
-  .bottom-sections{
-    display: none;
-  }
-  .top-sections {
-        grid-template-columns: 1fr;
-    }
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-top: 0;
 }
 
 .highlight {
     background: #dce9d6;
     border-radius: 12px;
     padding: 25px;
-    
 }
 
 .highlight h2 {
@@ -176,7 +191,6 @@ img {
     font-weight: bold;
     margin-bottom: 10px;
     color: #1e4d2b;
-
 }
 
 .match {
@@ -202,4 +216,248 @@ img {
 
 .btn:hover {
     background: linear-gradient(to bottom, red, rgba(255, 0, 0, 0.539));
+}
+
+
+
+
+
+.schema-title {
+    text-align: center;
+    color: white;
+    font-size: 1.6rem;
+    margin: 0 0 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: #1e4d2b;
+    color: white;
+    border: 2px solid transparent;
+    padding: 8px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.tab-btn:hover {
+    background: #2d6e3e;
+}
+
+.tab-btn.active {
+    background: white;
+    color: #1e4d2b;
+    border-color: white;
+}
+
+
+.day-panel {
+    display: none;
+}
+
+.day-panel.visible {
+    display: block;
+}
+
+.group-label {
+    color: #a8e6b3;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 18px 0 8px 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.match-row {
+    background: #1e4d2b;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto 60px auto 1fr auto;
+    align-items: center;
+    gap: 8px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.match-row:hover {
+    background: #25613a;
+    transform: translateX(3px);
+}
+
+.final-row {
+    border: 2px solid #a8e6b3;
+}
+
+
+.team-home {
+    color: white;
+    font-size: 1rem;
+    text-align: right;
+}
+
+.team-away {
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+}
+
+
+.vs-badge {
+    background: green;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 30px;
+}
+
+.vs-final {
+    background: #a8e6b3;
+    color: #1e4d2b;
+}
+
+.score-badge {
+    background: #a8e6b3;
+    color: #1e4d2b;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 50px;
+}
+
+.match-time {
+    color: #a8e6b3;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.field-badge {
+    color: #78c488;
+    font-size: 0.78rem;
+    text-align: right;
+    white-space: nowrap;
+}
+
+
+.status {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.status.played   { background: #78c488; }
+.status.upcoming { background: #f0c040; }
+.status.live     { background: #ff4444; animation: blink 1s infinite; }
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+}
+
+
+.legend {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    color: #cce8d4;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+footer {
+    grid-area: fo;
+    background-color: #1e4d2b;
+    color: white;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 30px;
+    background-color: #1e4d2b;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #15381f;
+    font-size: 0.9rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .image-row    { display: none; }
+    .bottom-sections { display: none; }
+
+    .top-sections {
+        grid-template-columns: 1fr;
+    }
+
+    .match-row {
+        grid-template-columns: 1fr auto 50px auto 1fr;
+        font-size: 0.9rem;
+    }
+
+    .field-badge { display: none; }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .match-row {
+        grid-template-columns: 1fr 40px 1fr;
+        gap: 4px;
+    }
+
+    .match-time { display: none; }
+
+    .team-home,
+    .team-away  { font-size: 0.85rem; }
 }
