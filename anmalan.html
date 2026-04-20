@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Anmälan – Sommarcupen 2026</title>
+</head>
+<body>
+<div id="container">
+
+  <header>
+    <div class="logo">⚽</div>
+    <h1>Sommarcupen 2026</h1>
+    <div class="social">
+      <img src="img/Instagram_logo_2022.svg.webp" alt="Instagram">
+      <img src="img/unnamed.webp" alt="Social">
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html"><span class="nav-emoji">🏠</span><span class="nav-label">Hem</span></a></li>
+      <li><a href="schema.html"><span class="nav-emoji">📅</span><span class="nav-label">Spelschema</span></a></li>
+      <li><a href="resultat.html"><span class="nav-emoji">📊</span><span class="nav-label">Resultat</span></a></li>
+      <li><a href="anmalan.html" class="active"><span class="nav-emoji">✍️</span><span class="nav-label">Anmälan</span></a></li>
+    </ul>
+  </nav>
+
+ 
+   <main style="background-image: url(img/ball-488718_1280.jpg);"></main>
+ 
+
+  <section class="info-section">
+    <h2 class="schema-title">Anmäl Ert Lag</h2>
+
+    <div class="anmalan-grid">
+
+      
+      <div class="anmalan-info">
+
+        <div class="info-card">
+          <div class="info-card-icon">📅</div>
+          <div>
+            <h3>Datum</h3>
+            <p>19–21 juli 2026</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">📍</div>
+          <div>
+            <h3>Plats</h3>
+            <p>Stockholm Fotbollsarena</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">👥</div>
+          <div>
+            <h3>Åldersklass</h3>
+            <p>12–16 år</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">💰</div>
+          <div>
+            <h3>Anmälningsavgift</h3>
+            <p>1 200 kr / lag</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">⏰</div>
+          <div>
+            <h3>Sista anmälningsdag</h3>
+            <p>30 juni 2026</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">⚽</div>
+          <div>
+            <h3>Spelform</h3>
+            <p>7-mot-7, naturgräs</p>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <div class="anmalan-form-wrap">
+        <p class="group-label">Laguppgifter</p>
+
+        <div class="form-group">
+          <label for="lagnamn">Lagnamn *</label>
+          <input type="text" id="lagnamn" placeholder="Ex. IFK Stockholm">
+        </div>
+
+        <div class="form-group">
+          <label for="klubb">Klubb / Förening *</label>
+          <input type="text" id="klubb" placeholder="Ex. IFK Stockholm FK">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="aldersklass">Åldersklass *</label>
+            <select id="aldersklass">
+              <option value="">Välj klass</option>
+              <option>P12 (pojkar 12 år)</option>
+              <option>P14 (pojkar 14 år)</option>
+              <option>P16 (pojkar 16 år)</option>
+              <option>F12 (flickor 12 år)</option>
+              <option>F14 (flickor 14 år)</option>
+              <option>F16 (flickor 16 år)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="antal">Antal spelare *</label>
+            <input type="number" id="antal" placeholder="Ex. 14" min="7" max="20">
+          </div>
+        </div>
+
+        <p class="group-label" style="margin-top:20px;">Kontaktperson</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fornamn">Förnamn *</label>
+            <input type="text" id="fornamn" placeholder="Anna">
+          </div>
+          <div class="form-group">
+            <label for="efternamn">Efternamn *</label>
+            <input type="text" id="efternamn" placeholder="Svensson">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-post *</label>
+          <input type="email" id="email" placeholder="anna@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="telefon">Telefon *</label>
+          <input type="tel" id="telefon" placeholder="070-000 00 00">
+        </div>
+
+        <div class="form-group">
+          <label for="ovrigt">Övrigt / Frågor</label>
+          <textarea id="ovrigt" rows="3" placeholder="Eventuella frågor eller önskemål..."></textarea>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" id="villkor">
+          <label for="villkor">Jag godkänner <a href="#" class="form-link">tävlingsreglerna</a> och bekräftar att uppgifterna är korrekta.</label>
+        </div>
+
+        <button class="submit-btn" id="submitBtn" onclick="handleSubmit()">
+          Skicka Anmälan ✉️
+        </button>
+
+        <div class="form-success" id="successMsg">
+          ✅ Tack! Din anmälan är mottagen. Vi återkommer inom 2 vardagar.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Sommarcupen</h3>
+        <p>Stockholms största ungdomsturnering</p>
+      </div>
+      <div class="footer-section">
+        <h3>Kontakt</h3>
+        <p>Email: info@sommarcupen.se</p>
+        <p>Telefon: 070-1234567</p>
+      </div>
+      <div class="footer-section">
+        <h3>Info</h3>
+        <p>Plats: Stockholm</p>
+        <p>Datum: 19–21 Juli</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Sommarcupen</p>
+      <p>Senast uppdaterad: <span id="updated"></span></p>
+    </div>
+  </footer>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
